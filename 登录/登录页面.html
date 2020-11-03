@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登录</title>
+<link href="../css/public.css" rel="stylesheet" type="text/css">
+<link href="../css/header-and-footer.css" rel="stylesheet" type="text/css">
+<link href="../css/main.css" rel="stylesheet" type="text/css">
+<script src="../js/jQuery-v1.11.1.js"></script>
+<script src="../js/jquery.enplaceholder.js"></script>
+</head>
+
+<body>
+	<!--head-->
+	<div class="header">
+    	<div class="left logo">机构特色资源编创平台</div>
+    </div>
+	<div class="zlogin">
+    	<div class="zloginBox">
+        	<h1>管理员账号登录</h1>
+            <div class="form">
+            	<div class="item clearfix">
+                	<label class="left name" for="name"></label>
+                    <input class="left" type="text" autocomplete="off" placeholder="请输入用户名" id="name">
+                </div>
+                <div class="item clearfix">
+                	<label class="left psw" for="psw"></label>
+                    <input class="left" type="text" autocomplete="off" placeholder="请输入密码" id="psw">
+                    <span class="keyboard left"></span>
+                </div>
+                <a href="javascript:void(0);" class="loginBtn">登录</a>
+                <script>
+					$('.item input').placeholder({isUseSpan:true});
+                </script>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="footer">©《中国学术期刊（光盘版）》电子杂志社有限公司</div>
+</body>
+</html>

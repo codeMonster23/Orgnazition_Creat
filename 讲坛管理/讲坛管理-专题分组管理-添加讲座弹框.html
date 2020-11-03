@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="../css/public.css" rel="stylesheet" type="text/css">
+		<link href="../css/header-and-footer.css" rel="stylesheet" type="text/css">
+		<link href="../css/main.css" rel="stylesheet" type="text/css">
+		<link href="../css/platform.css" rel="stylesheet" type="text/css">
+        <script src='../js/jQuery-v1.11.1.js'></script>
+        <script src="../js/divSelect.js"></script>
+        <script src="../js/laydate/laydate.js"></script>
+        <script src='../js/jquery.enplaceholder.js'></script>
+	</head>
+	<body>
+		<div class="mask" style="display: block"></div>
+		<div class="modalAudit modal modal1 modalAddLecture">
+			<div class="modal-header">添加讲座<span class="close"></span></div>
+			<div class="modal-body content">
+				<div class="condition clearfix">
+                    <div class="partA left">
+                        <p>讲座名称</p>
+                        <ul>
+                            <li>讲座名称</li>
+                            <li>主讲姓名</li>
+                            <li>更新时间</li>
+                        </ul>
+                    </div>
+                    <div class="partB left">
+                        <input type="text" class="style1" placeholder="请输入关键字">
+                        <div class="style2">
+                            <span class="laydate-icon" onclick="laydate()">2016-03-04</span>
+                            <label class="left">至</label>
+                            <span class="laydate-icon" onclick="laydate()">2016-03-04</span>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" class="left search">搜索</a>
+                </div>
+                <table>
+                    <tr>
+                        <th>选择</th>
+                        <th>序号</th>
+                        <th>讲座名称</th>
+                        <th>主讲姓名</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>01</td>
+                        <td>对“世界气候”的研究第八章 东亚地区</td>
+                        <td>欧阳茉莉</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>02</td>
+                        <td>对“世界气候”的研究第八章 东亚地区</td>
+                        <td>欧阳茉莉</td>
+                    </tr>
+                    <tr class="active">
+                        <td><input type="checkbox"></td>
+                        <td>03</td>
+                        <td>对“世界气候”的研究第八章 东亚地区</td>
+                        <td>欧阳茉莉</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>04</td>
+                        <td>对“世界气候”的研究第八章 东亚地区</td>
+                        <td>欧阳茉莉</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>05</td>
+                        <td>对“世界气候”的研究第八章 东亚地区</td>
+                        <td>欧阳茉莉</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>06</td>
+                        <td>对“世界气候”的研究第八章 东亚地区</td>
+                        <td>欧阳茉莉</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>07</td>
+                        <td>对“世界气候”的研究第八章 东亚地区</td>
+                        <td>欧阳茉莉</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>08</td>
+                        <td>对“世界气候”的研究第八章 东亚地区</td>
+                        <td>欧阳茉莉</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>09</td>
+                        <td>对“世界气候”的研究第八章 东亚地区</td>
+                        <td>欧阳茉莉</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>10</td>
+                        <td>对“世界气候”的研究第八章 东亚地区</td>
+                        <td>欧阳茉莉</td>
+                    </tr>
+                </table>
+			</div>
+			<div class="modal-footer">
+				<a href="javascript:void(0)" class="btn btn-blue">确定</a><a href="javascript:void(0)" class="btn">取消</a>
+			</div>
+		</div>
+        <script>
+            $(function(){
+                $.divselect($(".category .select p"),$(".category .select ul"),$(".category .select ul li"));
+                $.divselect($(".condition .partA p"),$(".condition .partA ul"),$(".condition .partA ul li"));
+            });
+            $(".condition .partA ul li").click(function(){
+                var text=$(this).text()
+                if(text.indexOf("时间")>0){
+                    $(".condition .partB .style1").hide()
+                    $(".condition .partB .style2").show()
+                    }
+                else{
+                    $(".condition .partB .style1").show()
+                    $(".condition .partB .style2").hide()
+                    }
+            });
+
+
+            $('.modalAddLecture table tr').hover(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                $('td').css('border-bottom-color','#e8e8ec');
+                $(this).find('td').css('border-bottom-color','#dd8c69');
+                $('.modalAddLecture table tr').each(function () {
+                    $(this).find('td:last').css('border-right-color','#e8e8ec');
+                })
+                $(this).find('td:last').css('border-right-color','#dd8c69');
+                $('.modalAddLecture table th').css('border-bottom-color','#eff0f6');
+                $(this).prev().find('td,th').css('border-bottom-color','#dd8c69');
+            })
+        </script>
+	</body>
+</html>

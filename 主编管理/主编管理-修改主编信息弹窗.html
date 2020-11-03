@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>主编管理</title>
+<link href="../css/public.css" rel="stylesheet" type="text/css">
+<link href="../css/header-and-footer.css" rel="stylesheet" type="text/css">
+<link href="../css/main.css" rel="stylesheet" type="text/css">
+<script src="../js/jQuery-v1.11.1.js"></script>
+<script src="../js/divSelect.js"></script>
+<script src="../js/laydate/laydate.js"></script>
+</head>
+
+<body>
+<div class="modalEditor modalAdd">
+	<h1>添加主编信息</h1>
+    <div class="form clearfix">
+    	<div class="left">
+        	<div class="item clearfix">
+            	<label class="left"><span>*</span>用户名：</label>
+                <p class="left">123456</p>
+            </div> 
+            <div class="item clearfix">
+            	<label class="left"><span>*</span>所在部门：</label>
+                <input type="text">
+            </div> 
+            <div class="item clearfix">
+            	<label class="left"><span>*</span>手机号：</label>
+                <input type="text">
+            </div> 
+            <div class="item clearfix">
+            	<label class="left">证件类型：</label>
+                <div class="selectWrap left">
+               <a href="javascript:void(0)" class="toggle">身份证</a>
+                <ul>
+                    <li>身份证</li>
+                    <li>工作证</li>
+                </ul>
+            </div>
+            </div> 
+        </div>
+        <div class="right">
+        	<div class="item clearfix">
+            	<label class="left"><span>*</span>真实姓名：</label>
+                <input type="text">
+            </div> 
+            <div class="item clearfix">
+            	<label class="left"><span>*</span>岗位：</label>
+                <input type="text">
+            </div> 
+            <div class="item clearfix">
+            	<label class="left"><span>*</span>邮箱：</label>
+                <input type="text">
+            </div> 
+            <div class="item clearfix">
+            	<label class="left">证件号：</label>
+                <input type="text">
+            </div> 
+        </div>
+    </div>
+    <a href="javascript:void(0)" class="save">保存</a>
+    <script>
+    $(function(){
+        $.divselect($(".form .selectWrap .toggle"),$(".form .selectWrap ul"),$(".form .selectWrap li"));
+    });
+</script>
+</div>
+	
+</body>
+</html>

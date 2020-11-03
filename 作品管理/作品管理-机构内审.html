@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>作品管理</title>
+<link href="../css/public.css" rel="stylesheet" type="text/css">
+<link href="../css/header-and-footer.css" rel="stylesheet" type="text/css">
+<link href="../css/main.css" rel="stylesheet" type="text/css">
+<script src="../js/jQuery-v1.11.1.js"></script>
+<script src="../js/divSelect.js"></script>
+<script src="../js/laydate/laydate.js"></script>
+</head>
+
+<body>
+	<!--head-->
+	<div class="header">
+    	<div class="left logo">机构特色资源编创平台</div>
+        <div class="right name">北京大学123</div>
+        <ul class="dropList">
+        	<li><a href="#">返回首页</a></li>
+            <li><a href="#">退出登录</a></li>
+        </ul>
+        <script>
+		(function(){
+		var ls=$(".header .name");
+		var lb=$(".dropList");
+		ls.hover(function()
+		{
+			lb.css("display","block");
+		},function(){
+			lb.css("display","none");
+			})
+		lb.hover(function(){
+			$(this).css("display","block");
+			},function(){
+			$(this).css("display","none");
+		})
+		})()
+	</script>
+    </div>
+    <!--banner-->
+    <div class="topBanner">
+    	<div class="left logo"><img src="../imagesTemp/header-and-footer/hf-logo.jpg" width="144" height="144"></div>
+        <div class="left name">北京大学医学系特色资源中心</div>
+    </div>
+    <div class="main clearfix">
+    	<div class="left sidebar">
+        	<div class="item item1 cur">
+            	<a href="javascript:void(0)" class="title">作品管理<i></i></a>
+                <span class="angle"></span>
+                <ul style="display:block;">
+                	<li class="first"><a href="javascript:void(0)">全部作品</a></li>
+                    <li class="active"><a href="javascript:void(0)">机构内审</a></li>
+                    <li><a href="javascript:void(0)">作品分组管理</a></li>
+                    <li class="last"></li>
+                </ul>
+            </div>
+            <div class="divide"></div>
+            	<div class="item item2">
+            	<a href="javascript:void(0)" class="title">主编管理<i></i></a>
+                 <span class="angle"></span>
+                 <ul>
+                	<li class="first active"><a href="javascript:void(0)">全部主编</a></li>
+                    <li><a href="javascript:void(0)">主编审核</a></li>
+                    <li class="last"></li>
+                </ul>
+            </div>
+            <div class="divide"></div>
+            	<div class="item item3">
+            	<a href="javascript:void(0)" class="title">留言管理<i></i></a>
+                 <span class="angle"></span>
+            </div>
+            <div class="divide"></div>
+            	<div class="item item4">
+            	<a href="javascript:void(0)" class="title">审核管理<i></i></a>
+                 <span class="angle"></span>
+            </div>
+            <div class="divide"></div>
+            	<div class="item item5">
+            	<a href="javascript:void(0)" class="title">平台设置<i></i></a>
+                 <span class="angle"></span>
+                 <ul>
+                	<li class="first active"><a href="javascript:void(0)">页面设置</a></li>
+                    <li><a href="javascript:void(0)">机构简介</a></li>
+                    <li><a href="javascript:void(0)">主编推荐</a></li>
+                    <li><a href="javascript:void(0)">作品推荐</a></li>
+                    <li><a href="javascript:void(0)">公告管理</a></li>
+                    <li class="last"></li>
+                </ul>
+            </div>
+            <div class="divide"></div>
+            	<div class="item item6">
+            	<a href="javascript:void(0)" class="title">基本信息<i></i></a>
+                 <span class="angle"></span>
+            </div>
+            <div class="divide"></div>
+        </div> 
+        <script>
+			$(".sidebar .item").click(function(){
+				$(this).addClass("cur").siblings(".item").removeClass("cur")
+				$(this).find("ul").slideDown()
+				$(this).siblings(".item").find("ul").slideUp()
+				})
+		  $(".sidebar ul li").click(function(){
+			$(this).addClass("active").siblings().removeClass("active")  
+			  })
+        </script>
+        <!--右侧主体-->
+        <div class="content height730px">
+        	<div class="route"><a href="#">作品管理</a> &gt; <span>作品审核</span></div>
+            <div class="operate">
+            	<div class="tabNav"><a href="javascript:void(0)" class="left on">全部</a><a href="javascript:void(0)" class="left">机构内审</a><a href="javascript:void(0)" class="left">返回修改</a></div>
+                <div class="condition clearfix right">
+                        	<div class="partA left">
+                            	<p>作品名称</p>
+                                <ul>
+                                	<li>作品名称</li>
+                                	<li>主编姓名</li>
+                                    <li>发布时间</li>
+                                </ul>
+                            </div>
+                            <div class="partB left">
+                            <input type="text" class="style1">
+                            <div class="style2">
+                            	<span class="laydate-icon" onclick="laydate()">2016-03-04</span>
+                                <label class="left">至</label>
+                                <span class="laydate-icon" onclick="laydate()">2016-03-04</span>
+                            </div>
+                            </div>
+                            <a href="javascript:void(0)" class="left search">搜索</a>
+               </div> 
+                <script>
+							$(function(){
+							$.divselect($(".condition .partA p"),$(".condition .partA ul"),$(".condition .partA ul li"));
+							});
+							$(".condition .partA ul li").click(function(){
+								var text=$(this).text()
+								if(text.indexOf("时间")>0){
+									$(".condition .partB .style1").hide()
+									$(".condition .partB .style2").show()
+									}
+								else{
+									$(".condition .partB .style1").show()
+									$(".condition .partB .style2").hide()
+									}
+							})
+                        </script>
+            </div>
+            <div class="wrap wrapTab">
+                <table class="table table1">
+                	<tr>
+                    	<th>序号</th>
+                        <th>文集编码</th>
+                        <th>作品名称</th>
+                        <th>主编姓名</th>
+                        <th>作品分组</th>
+                        <th>审核状态</th>
+                        <th>机构内审核人</th>
+                        <th>发布状态</th>
+                        <th>发布时间</th>
+                        <th class="last">操作</th>
+                    </tr>
+                    <tr>
+                    	<td>01</td>
+                        <td>Pnd12341</td>
+                        <td><a href="#" class="name">壮士断腕--中国煤企的困境求存</a></td>
+                        <td>刘继芬</td>
+                        <td>煤炭工业</td>
+                        <td>机构内审</td>
+                        <td>韩京锎<a href="javascript:void(0);" class="xg">【修改审核人】</a></td>
+                        <td><span class="state bgOrange">待发布</span></td>
+                        <td>-</td>
+                        <td>[<a href="#">审核</a>]</td>
+                    </tr>
+                    <tr>
+                    	<td>02</td>
+                        <td>Pnd12341</td>
+                        <td><a href="#" class="name">壮士断腕--中国煤企的困境求存</a></td>
+                        <td>刘继芬</td>
+                        <td>煤炭工业</td>
+                        <td>初审</td>
+                        <td>韩京锎<a href="javascript:void(0);" class="xg disable">【修改审核人】</a></td>
+                        <td><span class="state bgGreen">已发布</span></td>
+                        <td>2016/05/26<br>16:15:12</td>
+                        <td>[<a href="#">审核</a>]</td>
+                    </tr>
+                    <tr>
+                    	<td>03</td>
+                        <td>Pnd12341</td>
+                        <td><a href="#" class="name">壮士断腕--中国煤企的困境求存</a></td>
+                        <td>刘继芬</td>
+                        <td>煤炭工业</td>
+                         <td>质审</td>
+                        <td>韩京锎<a href="javascript:void(0);" class="xg disable">【修改审核人】</a></td>
+                        <td><span class="state bgRed">已下架</span></td>
+                        <td>2016/05/26<br>16:15:12</td>
+                        <td>[<a href="#">查看</a>]</td>
+                    </tr>
+                    <tr>
+                    	<td>04</td>
+                        <td>Pnd12341</td>
+                        <td><a href="#" class="name">壮士断腕--中国煤企的困境求存</a></td>
+                        <td>刘继芬</td>
+                        <td>煤炭工业</td>
+                        <td>终审</td>
+                        <td>韩京锎<a href="javascript:void(0);" class="xg disable">【修改审核人】</a></td>
+                        <td><span class="state bgOrange">待发布</span></td>
+                        <td>2016/05/26<br>16:15:12</td>
+                        <td>[<a href="#">审核</a>]</td>
+                    </tr>
+                    <tr>
+                    	<td>05</td>
+                        <td>Pnd12341</td>
+                        <td><a href="#" class="name">壮士断腕--中国煤企的困境求存</a></td>
+                        <td>刘继芬</td>
+                        <td>煤炭工业</td>
+                        <td>终审</td>
+                        <td>韩京锎<a href="javascript:void(0);" class="xg disable">【修改审核人】</a></td>
+                        <td>——</td>
+                        <td>2016/05/26<br>16:15:12</td>
+                        <td>[<a href="#">查看</a>]</td>
+                    </tr>
+                    <tr>
+                    	<td>06</td>
+                        <td>Pnd12341</td>
+                        <td><a href="#" class="name">壮士断腕--中国煤企的困境求存</a></td>
+                        <td>刘继芬</td>
+                        <td>煤炭工业</td>
+                        <td>审核完成</td>
+                        <td>韩京锎<a href="javascript:void(0);" class="xg disable">【修改审核人】</a></td>
+                        <td><span class="state bgOrange">待发布</span></td>
+                        <td>2016/05/26<br>16:15:12</td>
+                        <td>[<a href="#">审核</a>]</td>
+                    </tr>
+                    <tr>
+                    	<td>07</td>
+                        <td>Pnd12341</td>
+                        <td><a href="#" class="name">壮士断腕--中国煤企的困境求存</a></td>
+                        <td>刘继芬</td>
+                        <td>煤炭工业</td>
+                        <td>返回修改</td>
+                        <td>韩京锎<a href="javascript:void(0);" class="xg disable">【修改审核人】</a></td>
+                        <td><span class="state bgOrange">待发布</span></td>
+                        <td>2016/05/26<br>16:15:12</td>
+                        <td>[<a href="#">审核</a>]</td>
+                    </tr>
+                    <tr>
+                    	<td>08</td>
+                        <td>Pnd12341</td>
+                        <td><a href="#" class="name">壮士断腕--中国煤企的困境求存</a></td>
+                        <td>刘继芬</td>
+                        <td>煤炭工业</td>
+                         <td>审核完成</td>
+                        <td>韩京锎<a href="javascript:void(0);" class="xg disable">【修改审核人】</a></td>
+                        <td><span class="state bgOrange">待发布</span></td>
+                        <td>2016/05/26<br>16:15:12</td>
+                        <td>[<a href="#">审核</a>]</td>
+                    </tr>
+                    <tr>
+                    	<td>09</td>
+                        <td>Pnd12341</td>
+                        <td><a href="#" class="name">壮士断腕--中国煤企的困境求存</a></td>
+                        <td>刘继芬</td>
+                        <td>煤炭工业</td>
+                         <td>审核完成</td>
+                        <td>韩京锎<a href="javascript:void(0);" class="xg disable">【修改审核人】</a></td>
+                        <td><span class="state bgOrange">待发布</span></td>
+                        <td>2016/05/26<br>16:15:12</td>
+                        <td>[<a href="#">审核</a>]</td>
+                    </tr>
+                    <tr>
+                    	<td>10</td>
+                        <td>Pnd12341</td>
+                        <td><a href="#" class="name">壮士断腕--中国煤企的困境求存</a></td>
+                        <td>刘继芬</td>
+                        <td>煤炭工业</td>
+                         <td>审核完成</td>
+                        <td>韩京锎<a href="javascript:void(0);" class="xg disable">【修改审核人】</a></td>
+                        <td><span class="state bgOrange">待发布</span></td>
+                        <td>2016/05/26<br>16:15:12</td>
+                        <td>[<a href="#">审核</a>]</td>
+                    </tr>
+                </table>
+                <script>
+					$(".table tr:even td").css({"background-color":"#F4F4F4"})
+                </script>
+                <div class="page">
+              <ul>
+                <li class="width-56"><a href="">首页</a></li>
+                <li class="width-56"><a href="">上一页</a></li>
+                <li><a href="" class="cur">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">6</a></li>
+                <li class="border0">...</li>
+                <li><a href="">987</a></li>
+                <li class="width-56"><a href="">下一页</a></li>
+                <li class="width-56"><a href="">末页</a></li>
+                <li class="width-56 border0 ">跳转到：</li>
+                <li class="border0 width-80">
+                  <div class="input-group page-input">
+                    <input type="text" class="form-control txt"> 
+                    <a href="javascript:void(0)" class="btn">确定</a>
+                    </div>
+                </li>
+              </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="footer">©《中国学术期刊（光盘版）》电子杂志社有限公司</div>
+</body>
+</html>

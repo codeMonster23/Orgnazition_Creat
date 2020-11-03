@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>主编推荐</title>
+        <link href="../css/public.css" rel="stylesheet" type="text/css">
+        <link href="../css/header-and-footer.css" rel="stylesheet" type="text/css">
+        <link href="../css/main.css" rel="stylesheet" type="text/css">
+        <link href="../css/platform.css" rel="stylesheet" type="text/css">
+        <script src="../js/jQuery-v1.11.1.js"></script>
+        <script src="../js/divSelect.js"></script>
+        <script src="../js/laydate/laydate.js"></script>
+    </head>
+    <body>
+        <!--head-->
+        <div class="header">
+            <div class="left logo">机构特色资源编创平台</div>
+            <div class="right name">北京大学123</div>
+            <ul class="dropList">
+                <li><a href="#">返回首页</a></li>
+                <li><a href="#">退出登录</a></li>
+            </ul>
+            <script>
+                (function(){
+                    var ls=$(".header .name");
+                    var lb=$(".dropList");
+                    ls.hover(function(){
+                        lb.css("display","block");
+                    },function(){
+                        lb.css("display","none");
+                        })
+                    lb.hover(function(){
+                        $(this).css("display","block");
+                        },function(){
+                        $(this).css("display","none");
+                    })
+                })()
+            </script>
+        </div>
+        <!--banner-->
+        <div class="topBanner">
+            <div class="left logo"><img src="../imagesTemp/header-and-footer/hf-logo.jpg" width="144" height="144"></div>
+            <div class="left name">北京大学医学系特色资源中心</div>
+        </div>
+        <div class="main clearfix">
+            <div class="left sidebar">
+                <div class="item item1">
+                    <a href="javascript:void(0)" class="title">作品管理<i></i></a>
+                    <span class="angle"></span>
+                    <ul>
+                        <li class="first active"><a href="javascript:void(0)">全部作品</a></li>
+                        <li><a href="javascript:void(0)">作品审核</a></li>
+                        <li><a href="javascript:void(0)">合成发布</a></li>
+                        <li><a href="javascript:void(0)">申请公开出版</a></li>
+                        <li><a href="javascript:void(0)">作品分类管理</a></li>
+                        <li class="last"></li>
+                    </ul>
+                </div>
+                <div class="divide"></div>
+                <div class="item item2  ">
+                    <a href="javascript:void(0)" class="title">主编管理<i></i></a>
+                    <span class="angle"></span>
+                </div>
+                <div class="divide"></div>
+                <div class="item item3">
+                    <a href="javascript:void(0)" class="title">留言管理<i></i></a>
+                    <span class="angle"></span>
+                </div>
+                <div class="divide"></div>
+                <div class="item item4">
+                    <a href="javascript:void(0)" class="title">审核管理<i></i></a>
+                    <span class="angle"></span>
+                </div>
+                <div class="divide"></div>
+                <div class="item item5 cur">
+                    <a href="javascript:void(0)" class="title">平台设置<i></i></a>
+                    <span class="angle"></span>
+                    <ul>
+                        <li class="first"><a href="javascript:void(0)">页面设置</a></li>
+                        <li><a href="javascript:void(0)">机构简介</a></li>
+                        <li class="active"><a href="javascript:void(0)">主编推荐</a></li>
+                        <li><a href="javascript:void(0)">作品推荐</a></li>
+                        <li><a href="javascript:void(0)">公告管理</a></li>
+                        <li class="last"></li>
+                    </ul>
+                </div>
+                <div class="divide"></div>
+                <div class="item item6">
+                    <a href="javascript:void(0)" class="title">基本信息<i></i></a>
+                    <span class="angle"></span>
+                </div>
+                <div class="divide"></div>
+            </div>
+            <script>
+                $(".sidebar .item").click(function(){
+                    $(this).addClass("cur").siblings(".item").removeClass("cur")
+                    $(this).find("ul").slideDown()
+                    $(this).siblings(".item").find("ul").slideUp()
+                })
+                $(".sidebar ul li").click(function(){
+                    $(this).addClass("active").siblings().removeClass("active")
+                })
+            </script>
+            <!--右侧主体-->
+            <div class="content ad">
+                <div class="route clearfix" style="height:34px;">
+                    <div class="left"><a href="#">平台设置</a> &gt; <span>广告推荐</span></div>
+                    <div class="right addAd">添加广告</div>
+                </div>
+                <div class="wrap">
+                    <div class="module por">
+                        <span class="number">1.</span>
+                        <table class="table table1">
+                            <tr>
+                                <th width="80">标题</th>
+                                <th class="last"><strong>大成编客——全国电子书编创大赛</strong></th>
+                            </tr>
+                            <tr>
+                                <td>图片</td>
+                                <td>
+                                    <div class="pic">
+                                        <p>[<a href="javascript:;">重新上传</a>]</p>
+                                        <img src="../images/main/ad.jpg" alt="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>链接</td>
+                                <td>http://bianke.cnki.net/Series</td>
+                            </tr>
+                            <tr>
+                                <td>添加时间</td>
+                                <td>2017.12.11</td>
+                            </tr>
+                            <tr>
+                                <td>操作</td>
+                                <td>[<a href="#">编辑</a>]&nbsp;[<a href="#" class="move">上移</a>]&nbsp;[<a href="#" class="move">下移</a>]&nbsp;[<a href="#">删除</a>]</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="module por">
+                        <span class="number">2.</span>
+                        <table class="table table1">
+                            <tr>
+                                <th width="80">标题</th>
+                                <th class="last"><input type="text" placeholder="请输入广告标题"></th>
+                            </tr>
+                            <tr class="uploadPic">
+                                <td>图片</td>
+                                <td>
+                                    <p>建议封面尺寸为 916px * 88px<br>图片需小于2M，支持jpg、gif、png</p>
+                                    <a href="javascript:;" class="btn">上传图片</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>链接</td>
+                                <td><input type="text" placeholder="请输入广告链接"></td>
+                            </tr>
+                            <tr>
+                                <td>添加时间</td>
+                                <td>2017.12.11</td>
+                            </tr>
+                            <tr>
+                                <td>操作</td>
+                                <td>[<a href="#">编辑</a>]&nbsp;[<a href="#" class="move">上移</a>]&nbsp;[<a href="#" class="move">下移</a>]&nbsp;[<a href="#">删除</a>]</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="module por">
+                        <span class="number">2.</span>
+                        <table class="table table1">
+                            <tr>
+                                <th width="80">标题</th>
+                                <th class="last"><input type="text" placeholder="请输入广告标题"></th>
+                            </tr>
+                            <tr class="uploadPic">
+                                <td>图片</td>
+                                <td>
+                                    <p>建议封面尺寸为 916px * 88px<br>图片需小于2M，支持jpg、gif、png</p>
+                                    <a href="javascript:;" class="btn">上传图片</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>链接</td>
+                                <td><input type="text" placeholder="请输入广告链接"></td>
+                            </tr>
+                            <tr>
+                                <td>添加时间</td>
+                                <td>2017.12.11</td>
+                            </tr>
+                            <tr>
+                                <td>操作</td>
+                                <td>[<a href="#">编辑</a>]&nbsp;[<a href="#" class="move">上移</a>]&nbsp;[<a href="#" class="move">下移</a>]&nbsp;[<a href="#">删除</a>]</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        <div class="footer">©《中国学术期刊（光盘版）》电子杂志社有限公司</div>
+        <script>
+            $("table tr").each(function () {
+                $(this).find(":first").css({"background":"#EAEAEA","text-align":"center","padding":0});
+            });
+        </script>
+    </body>
+</html>

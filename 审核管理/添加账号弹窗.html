@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="../css/public.css" rel="stylesheet" type="text/css">
+<link href="../css/header-and-footer.css" rel="stylesheet" type="text/css">
+<link href="../css/main.css" rel="stylesheet" type="text/css">
+<link href="../css/platform.css" rel="stylesheet" type="text/css">
+<script src="../js/jQuery-v1.11.1.js"></script>
+<script src="../js/divSelect.js"></script>
+<script src="../js/laydate/laydate.js"></script>
+</head>
+<body>
+<div class="modalEditor modalAudit modalAudit1">
+	<h1>添加账号</h1>
+        <h2>基本信息</h2>
+         <div class="form form1 clearfix">
+        <div class="left">
+            <div class="item clearfix">
+                <label class="left">真实姓名：</label>
+                <input type="text">
+            </div> 
+            <div class="item clearfix">
+                <label class="left">手机号：</label>
+                <input type="text">
+            </div> 
+        </div>
+        <div class="right">
+            <div class="item clearfix">
+                <label class="left">所在部门：</label>
+                <input type="text">
+            </div> 
+            <div class="item clearfix">
+                <label class="left">邮箱：</label>
+                <input type="text">
+            </div> 
+        </div>
+    </div>
+    <h2>账号信息</h2>
+    <div class="form form2 clearfix">
+        <div class="item spec clearfix">
+            <label class="left">分管领域：</label>
+            <div class="selectWrap left">
+               <a href="javascript:void(0)" class="toggle">基础教育</a>
+                <ul>
+                    <li>用户名</li>
+                    <li>真实姓名</li>
+                    <li>所在部门</li>
+                </ul>
+            </div>
+        </div> 
+        <div class="form-group clearfix">
+            <div class="left">
+                <div class="item clearfix">
+                    <label class="left">用户名：</label>
+                     <input type="text">
+                </div> 
+            </div>
+            <div class="right">
+                <div class="item clearfix">
+                    <label class="left">密码：</label>
+                    <input type="text">
+                </div> 
+            </div>
+        </div>
+        <div class="item spec clearfix">
+            <label class="left">开通时间：</label>
+            <div class="calendar left clearfix">
+                <span class="laydate-icon" onclick="laydate()">2016-03-04</span>
+                <span class="txt">至</span>
+                <span class="laydate-icon" onclick="laydate()">2016-03-04</span>
+            </div>
+        </div> 
+    </div>
+    <div class="modal-footer">
+        <a href="javascript:void(0)" class="btn btn-blue">确定</a>
+        <a href="javascript:void(0)" class="btn">取消</a>
+    </div>
+</div>
+<script>
+    $(function(){
+        $.divselect($(".form2  .selectWrap .toggle"),$(".form2  .selectWrap ul"),$(".form2  .selectWrap li"));
+    });
+</script>
+</body>
+</html>

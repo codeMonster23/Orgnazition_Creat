@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>页面设置</title>
+<link href="../css/public.css" rel="stylesheet" type="text/css">
+<link href="../css/header-and-footer.css" rel="stylesheet" type="text/css">
+<link href="../css/main.css" rel="stylesheet" type="text/css">
+<link href="../css/platform.css" rel="stylesheet" type="text/css">
+<script src="../js/jQuery-v1.11.1.js"></script>
+<script src="../js/divSelect.js"></script>
+<script src="../js/laydate/laydate.js"></script>
+</head>
+
+<body>
+	<!--head-->
+	<div class="header">
+    	<div class="left logo">机构特色资源编创平台</div>
+        <div class="right name">北京大学123</div>
+        <ul class="dropList">
+        	<li><a href="#">返回首页</a></li>
+            <li><a href="#">退出登录</a></li>
+        </ul>
+        <script>
+		(function(){
+		var ls=$(".header .name");
+		var lb=$(".dropList");
+		ls.hover(function()
+		{
+			lb.css("display","block");
+		},function(){
+			lb.css("display","none");
+			})
+		lb.hover(function(){
+			$(this).css("display","block");
+			},function(){
+			$(this).css("display","none");
+		})
+		})()
+	</script>
+    </div>
+    <!--banner-->
+    <div class="topBanner">
+    	<div class="left logo"><img src="../imagesTemp/header-and-footer/hf-logo.jpg" width="144" height="144"></div>
+        <div class="left name">北京大学医学系特色资源中心</div>
+    </div>
+    <div class="main clearfix">
+    	<div class="left sidebar">
+        	<div class="item item1">
+            	<a href="javascript:void(0)" class="title">作品管理<i></i></a>
+                <span class="angle"></span>
+                <ul>
+                	<li class="first active"><a href="javascript:void(0)">全部作品</a></li>
+                    <li><a href="javascript:void(0)">作品审核</a></li>
+                    <li><a href="javascript:void(0)">合成发布</a></li>
+                    <li><a href="javascript:void(0)">申请公开出版</a></li>
+                    <li><a href="javascript:void(0)">作品分类管理</a></li>
+                    <li class="last"></li>
+                </ul>
+            </div>
+            <div class="divide"></div>
+            	<div class="item item2  ">
+            	<a href="javascript:void(0)" class="title">主编管理<i></i></a>
+                 <span class="angle"></span>
+            </div>
+            <div class="divide"></div>
+            	<div class="item item3">
+            	<a href="javascript:void(0)" class="title">留言管理<i></i></a>
+                 <span class="angle"></span>
+            </div>
+            <div class="divide"></div>
+            	<div class="item item4">
+            	<a href="javascript:void(0)" class="title">审核管理<i></i></a>
+                 <span class="angle"></span>
+            </div>
+            <div class="divide"></div>
+            	<div class="item item5 cur">
+            	<a href="javascript:void(0)" class="title">平台设置<i></i></a>
+                 <span class="angle"></span>
+                 <ul>
+                	<li class="first active"><a href="javascript:void(0)">页面设置</a></li>
+                    <li><a href="javascript:void(0)">机构简介</a></li>
+                    <li><a href="javascript:void(0)">主编推荐</a></li>
+                    <li><a href="javascript:void(0)">作品推荐</a></li>
+                    <li><a href="javascript:void(0)">公告管理</a></li>
+                    <li class="last"></li>
+                </ul>
+            </div>
+            <div class="divide"></div>
+            	<div class="item item6">
+            	<a href="javascript:void(0)" class="title">基本信息<i></i></a>
+                 <span class="angle"></span>
+            </div>
+            <div class="divide"></div>
+        </div> 
+        <script>
+			$(".sidebar .item").click(function(){
+				$(this).addClass("cur").siblings(".item").removeClass("cur")
+				$(this).find("ul").slideDown()
+				$(this).siblings(".item").find("ul").slideUp()
+				})
+		  $(".sidebar ul li").click(function(){
+			$(this).addClass("active").siblings().removeClass("active")  
+			  })
+        </script>
+        <!--右侧主体-->
+        <div class="content">
+        	<div class="route"><a href="#">平台设置</a> &gt; <span>页面设置</span></div>
+            <div class="wrap setting">
+                <div class="banner banner-login" style="background:url(../images/main/banner-login.jpg) no-repeat center;">
+                    <p class="title"><span>影像造奇研究院影像造奇研究院影像造奇研究院影像造奇研究院</span></p>
+                    <div class="login-pic"><img src="../images/main/login-thumb.png" width="302" height="342"></div>
+                </div>
+                <a href="#" class="preview-btn">预览</a>
+<!--                 <div class="info">
+                	<div class="upload"><a href="javascript:void(0)">上传背景图片</a></div>
+                    <p>推荐尺寸：400* 1920px</p>
+                </div> -->
+                <div class="btns">
+                    <a href="">设置背景图片</a>
+                    <a href="" class="btn-blue">保存</a>
+                </div>
+                <div class="checkboxWrap">
+                    <label><input type="checkbox" checked>显示logo</label>
+                    <label><input type="checkbox">显示机构名称</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="footer">©《中国学术期刊（光盘版）》电子杂志社有限公司</div>
+</body>
+</html>
